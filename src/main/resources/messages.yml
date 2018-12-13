@@ -1,0 +1,14 @@
+#Messages configuration value
+
+no_permission: "&cYou do not have permission to this command!"
+
+failed_to_load_stats: "&cAn issue has occured! Please try again later..."
+
+#If you've disabled the GUI, then this message will be send went a player does /playtime (or alias)
+# Possible plugin placeholders:
+#               %TIME_PLAYED_DAYS% - Returns the number of days played by the player (integer)
+#               %TIME_PLAYED_HOURS% - Returns the number of hours played by the player (integer 0-24)
+#               %TIME_PLAYED_MINUTES% - Returns the number of minutes played by the player (integer 0-60)
+#               %TIME_PLAYED_SECONDS% - Returns the number of seconds played by the player (integer 0-60)
+#               %TIME_PLAYED_SECONDS_UNFORMATTED% - Returns the number of total seconds played by the user (integer)
+playtime_message: "&aYou have played for &e%TIME_PLAYED_DAYS% &aDays, &e%TIME_PLAYED_HOURS% &aHours, &e%TIME_PLAYED_MINUTES% &aMinutes and &e%TIME_PLAYED_SECONDS%&a seconds"

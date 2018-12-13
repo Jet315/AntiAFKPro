@@ -1,0 +1,50 @@
+#Items can be easily added!:
+#Example:
+#    item_name: - Can be called anything
+#      type: STAINED_GLASS_PANE - Any Material, MUST be valid for your Minecraft Version
+#      data: 15 #Not used for Minecraft version 1.13 +
+#      name: " " - Can be called anything (and can contain placeholders)
+#      slot: 2 - Can be in any slot
+#      command_to_perform: "" - Can perform any command when clicked (%CLOSE% to close the menu) - forces user to execute the command
+#      lore: - Can have any lore
+#
+#                            Possible plugin placeholders:
+#                                 %TIME_PLAYED_DAYS% - Returns the number of days played by the player (integer)
+#                                 %TIME_PLAYED_HOURS% - Returns the number of hours played by the player (integer 0-24)
+#                                 %TIME_PLAYED_MINUTES% - Returns the number of minutes played by the player (integer 0-60)
+#                                 %TIME_PLAYED_SECONDS% - Returns the number of seconds played by the player (integer 0-60)
+#                                 %TIME_PLAYED_SECONDS_UNFORMATTED% - Returns the number of total seconds played by the user (integer)
+#
+#      - ' '
+#This is the GUI shown when a user does not have a house
+playtime_gui:
+  slots: 9 #Must be a multiple of 9
+  gui_name: "&bTime Played Menu"
+  items:
+    close_item:
+      type: NETHER_STAR
+      data: 0
+      name: '&c&lCLOSE'
+      slot: 0 #Slot start at 0
+      command_to_perform: "%CLOSE%" #%CLOSE% = close menu
+      lore:
+      - ' '
+      - '&7Click to close'
+      - '&7this GUI'
+      - ' '
+      - '&d&m-------------------'
+    time_item:
+      type: COMPASS
+      data: 0
+      name: '&a&lTime Played'
+      slot: 8
+      command_to_perform: "%CLOSE%"
+      lore:
+      - '&6You Have Played For:'
+      - ' '
+      - '&eDays: &b%TIME_PLAYED_DAYS%'
+      - '&eHours: &b%TIME_PLAYED_HOURS%'
+      - '&eMinutes: &b%TIME_PLAYED_MINUTES%'
+      - '&eSeconds: &b%TIME_PLAYED_SECONDS%'
+      - ' '
+      - '&d&m-------------------'

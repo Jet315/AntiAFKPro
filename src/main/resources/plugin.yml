@@ -1,0 +1,7 @@
+name: AntiAFKPro
+version: 1.0
+description: An advanced AntiAFK Plugin
+main: me.jet315.antiafkpro.AntiAFKPro
+commands:
+  playtime:
+    description: The base command for the AntiAFK Plugin

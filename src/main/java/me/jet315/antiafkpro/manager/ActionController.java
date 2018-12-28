@@ -41,6 +41,13 @@ public class ActionController {
     }
 
 
+    public void enable(){}
+
+    public void disable(){
+        this.actionAFKNodes.clear();
+        this.actionPlayTimeNodes.clear();
+    }
+
     /**
      *
      * @param afkPlayer will check this player against actionnodes, and execute them if needed

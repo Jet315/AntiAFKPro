@@ -31,6 +31,9 @@ public class GUIProperties extends DataFile {
         loadProperties();
     }
 
+    public void disable(){
+
+    }
 
     private void loadProperties() {
         /**

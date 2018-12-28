@@ -11,8 +11,8 @@ plugins_prefix: "&eAFK &7» "
 
 # -- Plugin Settings --
 
-#The check delay in seconds - These calculations are done ASync so I wouldn't suggest changing this (It's not going effect performance)
-#If you do change it, the actions below must be divisible by this number (So I wouldn't suggest changing it)
+#The check delay in seconds - These calculations are done ASync so I wouldn't suggest changing this (It's not going to effect performance)
+#If you do change it, the actions below must be divisible by this number (I wouldn't suggest changing it, but you have the option too)
 check_delay: 1
 
 #These actions are executed if the players time (in seconds) is equal to the number below
@@ -34,6 +34,16 @@ actions:
     120: #120 seconds = 2 minutes
       -  "MESSAGE|&eAFK &7» &cYou have been AFK for two minutes, you will be kicked soon!"
       -  "TITLE|&6You have been ; &6AFK for two minutes"
+    295:
+      -  "TITLE|&6Anti AFK ; &bYou will be kicked in &c5 &bseconds"
+    296:
+      -  "TITLE|&6Anti AFK ; &bYou will be kicked in &c4 &bseconds"
+    297:
+      -  "TITLE|&6Anti AFK ; &bYou will be kicked in &c3 &bseconds"
+    298:
+      -  "TITLE|&6Anti AFK ; &bYou will be kicked in &c2 &bseconds"
+    299:
+      -  "TITLE|&6Anti AFK ; &bYou will be kicked in &c1 &bsecond"
     300: #300 seconds = 5 minutes
       -  "COMMAND|kick %PLAYER% You have been kicked as you have been AFK for 5 minutes"
 #
@@ -46,6 +56,9 @@ actions:
     3600: #3600 seconds = 1 hour
       -  "MESSAGE|&eAFK &7» &cYou have played for 1 hour! &6You have been rewarded with $1000!"
       -  "COMMAND|eco give %PLAYER% 1000"
+    86400: #86400 seconds = 1 day
+      -  "MESSAGE|&eAFK &7» &cYou have played for 1 day - Wow, you really like this server! &6You have been rewarded with $10000!"
+      -  "COMMAND|eco give %PLAYER% 10000"
 
 
 store_player_time: true #Will store players time
@@ -54,11 +67,10 @@ enable_player_time_gui: true #If this is false, doing /afk (or alias) will tell 
 
 # -- Database storage --
 
-#Either can use SQLite or MySQL (Can use MySQL to enable a single cross-server database to store players time in)
+#Either you may use SQLite or MySQL (Can use MySQL to enable a single cross-server database to store players time in)
 #If you do not understand these settings, it's probably best not to change
 #There is currently no way to transfer data from one storage solution to another (I.E changing storage types after setting up the plugin will cause player data to start over)
 database:
-  prefix: "afk_" #can change this, if you want
   sqlite:
     use: true
     db: "data"

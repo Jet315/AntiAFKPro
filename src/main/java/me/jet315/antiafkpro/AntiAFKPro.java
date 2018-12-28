@@ -44,7 +44,6 @@ public class AntiAFKPro extends JavaPlugin {
         injector = module.createInjector();
         injector.injectMembers(this);
 
-
         // Register commands
         this.getCommand("playtime").setExecutor(this.commandHandler);
 
@@ -70,6 +69,18 @@ public class AntiAFKPro extends JavaPlugin {
     @Override
     public void onDisable() {
 
+    }
+
+    public void reloadConfiguration(){
+        messages.disable();
+        guiProperties.disable();
+        properties.disable();
+        actionController.disable();
+
+        actionController.enable();
+        properties.enable();
+        guiProperties.enable();
+        messages.enable();
     }
 
     /**

@@ -47,7 +47,13 @@ public class Properties extends DataFile {
      * Loads the config.yml
      */
     public void enable() {
+        super.reload();
         loadProperties();
+
+    }
+
+    public void disable(){
+
     }
 
     private void loadProperties() {

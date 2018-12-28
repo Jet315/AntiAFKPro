@@ -15,7 +15,7 @@
 #                                 %TIME_PLAYED_SECONDS% - Returns the number of seconds played by the player (integer 0-60)
 #                                 %TIME_PLAYED_SECONDS_UNFORMATTED% - Returns the number of total seconds played by the user (integer)
 #
-#      - ' '
+#
 #This is the GUI shown when a user does not have a house
 playtime_gui:
   slots: 9 #Must be a multiple of 9

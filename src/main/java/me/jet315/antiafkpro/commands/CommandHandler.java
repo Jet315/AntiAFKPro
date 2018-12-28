@@ -35,11 +35,10 @@ public class CommandHandler implements org.bukkit.command.CommandExecutor {
     @Inject
     public CommandHandler(AntiAFKPro plugin) {
         this.plugin = plugin;
+        commands.put("reload", new ReloadCommand(plugin));
     }
 
 
-    public CommandHandler() {
-    }
 
 
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {

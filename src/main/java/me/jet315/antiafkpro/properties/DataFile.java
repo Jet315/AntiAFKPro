@@ -19,12 +19,14 @@ public abstract class DataFile {
      */
     private File file;
     private FileConfiguration config;
+    private String configName;
 
     //I have to pass instance through constructor, as otherwise it'll be null as I'm calling methods from the constructor
     //(Instance class wouldn't have injected in time)
     @Inject
     public DataFile(String configName, AntiAFKPro instance){
         this.instance = instance;
+        this.configName = configName;
         createFile(configName);
         loadYml(configName);
     }
@@ -93,6 +95,10 @@ public abstract class DataFile {
         }catch (IOException e){
             System.out.println(e);
         }
+    }
+
+    protected void reload(){
+        loadYml(configName);
     }
 
 

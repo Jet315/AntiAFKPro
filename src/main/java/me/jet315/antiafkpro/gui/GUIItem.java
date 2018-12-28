@@ -19,7 +19,7 @@ public class GUIItem {
         //not perfect but efficient & works
         if(item.getItemMeta().hasLore()){
             for(String s : item.getItemMeta().getLore()){
-                if(s.contains("%")){
+                if(s.contains("%TIME")){
                     isTimeSlot = true;
                     break;
                 }

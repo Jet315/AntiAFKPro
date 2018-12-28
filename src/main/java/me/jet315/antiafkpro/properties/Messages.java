@@ -17,6 +17,9 @@ public class Messages extends DataFile{
         loadProperties();
     }
 
+    public void disable(){
+
+    }
 
     private void loadProperties() {
         noPermission = ChatColor.translateAlternateColorCodes('&',super.getConfig().getString("no_permission"));
